@@ -5,12 +5,14 @@ import '@vue/runtime-core'
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    MenuBar: typeof import('./src/components/MenuBar.vue')['default']
     NButton: typeof import('naive-ui')['NButton']
     NModal: typeof import('naive-ui')['NModal']
+    NSwitch: typeof import('naive-ui')['NSwitch']
     NUpload: typeof import('naive-ui')['NUpload']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    Upload: typeof import('./src/components/upload.vue')['default']
+    Upload: typeof import('./src/components/Upload.vue')['default']
   }
 }
 

@@ -5,9 +5,10 @@ import appView from './App.vue'
 import 'uno.css'
 import '@unocss/reset/tailwind.css'
 import { setupRouter } from './router'
-
+import { setupI18n } from './locales'
 async function bootstrap(app: App): Promise<App> {
   setupRouter(app)
+  await setupI18n(app)
   return app
 }
 

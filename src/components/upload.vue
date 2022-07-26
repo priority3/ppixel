@@ -22,16 +22,20 @@ const fileList = $ref<UploadFileInfo[]>([])
       }"
     >
       <div
-        i-carbon-plane
-        w-full h-full
+        i-uil-plus text-dark hover:bg-truegray-600
+        w-full h-full title="upload img"
       />
     </n-upload>
 
     <div h-10 fcc>
-      <div i-carbon-play-filled text-3xl hover:text-4xl transition="all .3s ease-linear" cursor-pointer />
+      <div
+        i-carbon-play-filled text-3xl
+        hover:text-4xl title="generate img"
+        transition="all .3s ease-linear" cursor-pointer
+      />
     </div>
     <p text-1 font="1 200">
-      click here to genrate
+      {{ $t('home.genration') }}
     </p>
   </div>
 </template>

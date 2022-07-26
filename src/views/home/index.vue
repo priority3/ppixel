@@ -1,7 +1,4 @@
 <script setup lang='ts'>
-import { useDark, useToggle } from '@vueuse/core'
-const dark = useDark()
-const toggleDark = useToggle(dark)
 </script>
 
 <template>
@@ -14,19 +11,7 @@ const toggleDark = useToggle(dark)
       rounded-xl shadow-xl
       mt-20 flex="~ col" items-center justify-around p5
     >
-      <div flex justify-around w-30 items-center>
-        <a href="https://github.com/priority3/vue-starter">
-          <div
-            i-carbon-logo-github
-            text-3xl cursor-pointer hover:text-truegray-500
-          />
-        </a>
-        <div
-          i-carbon-sun dark:i-carbon-moon
-          hover:text-truegray-500 text-3xl cursor-pointer
-          @click="toggleDark()"
-        />
-      </div>
+      <menu-bar />
       <div w-full>
         <upload />
       </div>
