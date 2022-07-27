@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { useDark, useToggle } from '@vueuse/core'
-import { locale } from '@/locales'
+import { useI18n } from 'vue-i18n'
 const dark = useDark()
+const i18n = useI18n()
 const toggleDark = useToggle(dark)
 function toggleLocale() {
-  locale.value = locale.value === 'en' ? 'zh_CN' : 'en'
+  i18n.locale.value = i18n.locale.value === 'en' ? 'zh-CN' : 'en'
 }
 // switch
 </script>

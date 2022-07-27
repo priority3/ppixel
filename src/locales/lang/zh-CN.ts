@@ -5,5 +5,5 @@ export default {
   message: {
     ...genMessage(modules as Record<string, Record<string, any>>, 'zh-CN'),
   },
-  momentLocaleName: 'zh-cn',
+  momentLocaleName: 'zh-CN',
 }
