@@ -1,15 +1,16 @@
 <script setup lang='ts'>
+import { isShow } from '@/utils/genrate'
 </script>
 
 <template>
   <div
-    h-screen w-screen font-semibold
-    flex justify-center
+    h-screen w-screen font-semibold p-10 class="box" transition=""
+    flex items-start :class="{ 'absolute top-50 left-10': isShow }"
   >
     <div
       w-120 h-80 bg-canvas
       rounded-xl shadow-xl
-      mt-20 flex="~ col" items-center justify-around p5
+      flex="~ col" items-center justify-around p5
     >
       <menu-bar />
       <div w-full>
@@ -20,5 +21,8 @@
   </div>
 </template>
 
-<style scoped lang='scss'>
+<style scoped>
+.box {
+  transition: padding 1s ease-in-out;
+}
 </style>
