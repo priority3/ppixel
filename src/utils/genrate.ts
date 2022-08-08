@@ -1,11 +1,16 @@
-import { readFileSync } from 'fs'
-import { ref } from 'vue'
-export const isShow = ref(false)
+import type { Ref } from 'vue'
+import { ref, watch } from 'vue'
+export const file = ref<Blob | MediaSource>()
 
-setTimeout(() => {
-  isShow.value = true
-}, 1000)
+watch(file, (newVal) => {
+  if (newVal)
+    useGenrateImg(newVal)
+})
 
-export function useGetImg() {
-  const reader = new FileReader()
+export function useGenrateImg(file: Blob | MediaSource) {
+  // const context = canvas.value.getContext('2d')
+  if (!file) return
+  console.log(file)
+
+  return file
 }

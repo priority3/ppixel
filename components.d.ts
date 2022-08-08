@@ -5,6 +5,7 @@ import '@vue/runtime-core'
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    DisplayImg: typeof import('./src/components/DisplayImg.vue')['default']
     MenuBar: typeof import('./src/components/MenuBar.vue')['default']
     NButton: typeof import('naive-ui')['NButton']
     NModal: typeof import('naive-ui')['NModal']

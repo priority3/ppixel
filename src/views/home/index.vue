@@ -1,11 +1,11 @@
 <script setup lang='ts'>
-import { isShow } from '@/utils/genrate'
+// import { isShow } from '@/utils/genrate'
 </script>
 
 <template>
   <div
-    h-screen w-screen font-semibold p-10 class="box" transition=""
-    flex items-start :class="{ 'absolute top-50 left-10': isShow }"
+    h-screen w-screen font-semibold p-10 class="box" transition-all
+    flex items-start flex-col justify-around
   >
     <div
       w-120 h-80 bg-canvas
@@ -18,6 +18,8 @@ import { isShow } from '@/utils/genrate'
       </div>
       <p>hello, this is priority</p>
     </div>
+
+    <display-img />
   </div>
 </template>
 
